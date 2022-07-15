@@ -15,9 +15,18 @@ radi diskretno dok god ne dobije odgovor servera o statusu zahtevane transakcije
 # Komande
 ### **LYT_GETPOINTS**
 
+#### xml endpoint
 ```http
 POST /api/Life/Req
 ```
-| Parameter   | Type         | Required | Description                                                                                                                                                                            |
-|:------------|:-------------|:---------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `requestid` | `string[50]` | `yes`    | requestid je identifikator request-a koji predstavlja izvor transakcije, requestid je tipa string koji se reprezentuje isključivo u numeričkom nizu karaktera (123654566663144888...) mora biti jedinstven(unique) |
+#### json endpoint
+```http
+POST /api/Life/ReqJson
+```
+#### body
+
+| Parameter        | Type          | Required | Description                                                                                                                                                                                                        |
+|:-----------------|:--------------|:---------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `requestid`      | `string[50]`  | `yes`    | requestid je identifikator request-a koji predstavlja izvor transakcije, requestid je tipa string koji se reprezentuje isključivo u numeričkom nizu karaktera (123654566663144888...) mora biti jedinstven(unique) |
+| `command`        | `enum`        | `yes`    | LYT_GETPOINTS                                                                                                                                                                                                      |
+| `chainid`        | `integer[16]` | `yes`    | jedinstveni broj klijenta iz priloga A                                                                                                                                                                             |
