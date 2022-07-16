@@ -37,7 +37,7 @@ import java.security.MessageDigest;
 import java.util.Base64;
 import java.security.NoSuchAlgorithmException;
 
-    public StringmakeSignatureHash() throwsNoSuchAlgorithmException {
+    public String makeSignatureHash() throwsNoSuchAlgorithmException {
         String hashString = "2632|569856631|25600.50|263231912051259417|TUY256XZ";
         MessageDigest messageDigest = MessageDigest.getInstance("SHA-512");
         messageDigest.update(hashString.getBytes());
