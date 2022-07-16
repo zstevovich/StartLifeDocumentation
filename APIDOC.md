@@ -77,7 +77,7 @@ POST /api/Life/ReqJson
 | `parameters.datetime`    | `string`      | &check;  | vreme kada je izvršena transakcija u formatu `dd.MM.yyyy hh:mm:ss`                                                                                                                                                                               |
 | `parameters.billno`      | `string`      | &check;  | broj računa (PFR brojač)                                                                                                                                                                                                                         |
 | `parameters.totalamount` | `string`      | &check;  | iznos računa za obračun life iznosa/ benefita u formatu `####.##`                                                                                                                                                                                |
-| `parameters.billtotal`   | `string`      | &check;  | ukupan iznos računa sa sa svim stavkama u formatu `####,##`                                                                                                                                                                                      |
+| `parameters.billtotal`   | `string`      | &check;  | ukupan iznos računa sa sa svim stavkama u formatu `####.##`                                                                                                                                                                                      |
 | `parameters.roundamount` | `string`      | &cross;  | iznos koji je dodat kako bi se zaokružila vrednost računa u formatu `####.##`                                                                                                                                                                    |
 | `parameters.addamount`   | `string`      | &cross;  | dodatni iznos koji kupac uplaćuje na svoju polisu u formatu `####.##`                                                                                                                                                                            |
 
@@ -110,17 +110,17 @@ POST /api/Life/ReqJson
 
 # Svi scenariji odgovora servera
 
-| Code | Description                                                                                                                                                              |
-|:----:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  0   | <green>Transakcija je uspešno registrovana ili zahtev je uspešno obrađen</green>                                                                                         |
-|  4   | Kartica sa ovim brojem nije aktivirana                                                                                                                                   |
-|  4   | Kartica sa ovim brojem ne postoji                                                                                                                                        |
-|  2   | Nehendlovane greške                                                                                                                                                      |
-|  4   | Kartica sa ovim brojem nije više validna                                                                                                                                 |
-|  4   | Kartica je već aktivirana!                                                                                                                                               |
-|  4   | Iznos je veći od maksimalnog godišnjeg iznosa!                                                                                                                           |
-|  5   | Sigurnosni potpis je neispravan                                                                                                                                          |
-|  9   | Korisničko ime ili šifra su neispravni                                                                                                                                   |
-|  3   | Transakcija je već registrovana(u data elementu su detalji registrovane transakcije)                                                                                     |
-|  6   | Optimistična kontrola poklapanja-OKP(druga transakcija jepromenilastanjekartice)                                                                                         |
-|  1   | Transakcija je parcijalno registrovana(u data elementu su detalji transakcije, parcijalna transakcija se javlja kada je iznos benefita veći od godinjeg limita amountmax |
+| Code | Description                                                                                                                                                                |
+|:----:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  0   | `Transakcija je uspešno registrovana ili zahtev je uspešno obrađen`                                                                                                        |
+|  4   | `Kartica sa ovim brojem nije aktivirana`                                                                                                                                   |
+|  4   | `Kartica sa ovim brojem ne postoji`                                                                                                                                        |
+|  2   | `Nehendlovane greške`                                                                                                                                                      |
+|  4   | `Kartica sa ovim brojem nije više validna`                                                                                                                                 |
+|  4   | `Kartica je već aktivirana!`                                                                                                                                               |
+|  4   | `Iznos je veći od maksimalnog godišnjeg iznosa!`                                                                                                                           |
+|  5   | `Sigurnosni potpis je neispravan`                                                                                                                                          |
+|  9   | `Korisničko ime ili šifra su neispravni`                                                                                                                                   |
+|  3   | `Transakcija je već registrovana(u data elementu su detalji registrovane transakcije)`                                                                                     |
+|  6   | `Optimistična kontrola poklapanja-OKP(druga transakcija jepromenilastanjekartice)`                                                                                         |
+|  1   | `Transakcija je parcijalno registrovana(u data elementu su detalji transakcije, parcijalna transakcija se javlja kada je iznos benefita veći od godinjeg limita amountmax` |
