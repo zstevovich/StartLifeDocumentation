@@ -39,7 +39,7 @@ POST /api/Life/ReqJson
 |:------------|:----------|:---------|:---------------------|
 | `cardno`    | `string`  | `yes`    | broj očitane kartice |
 
-#### odgovor json
+#### response json
 ```json
 {
   "requestid" : "string",
@@ -54,7 +54,7 @@ POST /api/Life/ReqJson
   }
 }
 ```
-#### odgovor xml
+#### response xml
 ```xml
 <asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <requestid>1236545585888</requestid>
