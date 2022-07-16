@@ -25,18 +25,31 @@ POST /api/Life/ReqJson
 ```
 #### body
 
-| Par.         | Type          |        Required        | Description                                                                                                                                                                                                                                      |
-|:-------------|:--------------|:----------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `requestid`  | `string[50]`  |   :heavy_check_mark:   | requestid je identifikator request-a koji predstavlja izvor transakcije, requestid je tipa string koji se reprezentuje isključivo u numeričkom nizu karaktera (123654566663144888...) mora biti jedinstven(unique), ovaj parametar generiše kasa |
-| `command`    | `enum`        |          [x]           | LYT_GETPOINTS                                                                                                                                                                                                                                    |
-| `chainid`    | `integer[16]` |          [x]           | jedinstveni broj klijenta iz priloga A                                                                                                                                                                                                           |
-| `shopid`     | `integer[32]` |          [ ]           | šifra objekta u kom je generisan request                                                                                                                                                                                                         |
-| `shopname`   | `string[100]` |          [ ]           | naziv objekta u kom je generisan request                                                                                                                                                                                                         |
-| `posno`      | `integer[32]` |          [x]           | broj kase na kojoj je generisan request                                                                                                                                                                                                          |
-| `parameters` | `child`       |          [x]           |    
-| Par.         | Type          |        Required        | Description                                                                                                                                                                                                                                      |
-| `cardno`     | `string`      |          [x]           | broj očitane kartice                                                                                                                                                                                                                             |
+| Par.                 | Type               | Required | Description                                                                                                                                                                                                                                      |
+|:---------------------|:-------------------|:--------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `requestid`          | `string[50]`       | &check;  | requestid je identifikator request-a koji predstavlja izvor transakcije, requestid je tipa string koji se reprezentuje isključivo u numeričkom nizu karaktera (123654566663144888...) mora biti jedinstven(unique), ovaj parametar generiše kasa |
+| `command`            | `enum`             | &check;  | LYT_GETPOINTS                                                                                                                                                                                                                                    |
+| `chainid`            | `integer[16]`      | &check;  | jedinstveni broj klijenta iz priloga A                                                                                                                                                                                                           |
+| `shopid`             | `integer[32]`      | &cross;  | šifra objekta u kom je generisan request                                                                                                                                                                                                         |
+| `shopname`           | `string[100]`      | &cross;  | naziv objekta u kom je generisan request                                                                                                                                                                                                         |
+| `posno`              | `integer[32]`      | &check;  | broj kase na kojoj je generisan request                                                                                                                                                                                                          |
+| `parameters`         | `childobject`      |          | child bjekat                                                                                                                                                                                                                                     |
+| `parametsers.cardno` | `string`           | &check;  | broj očitane kartice                                                                                                                                                                                                                             |
                                                                                                                                                                                                  |
 
 ### Response
+
+| Par.        | Type     | Description           |
+|-------------|----------|-----------------------|
+| `requestid` | `string` | Prodleđeni request id |
+| `status`    | `child`  |  
+| Par.        | Type     | Description           |
+| -----       | -----    | -----                 |
+|             |          |                       |
+                     |
+| `data`      | `child`  |     
+|     |     |     |
+|-----|-----|-----|
+|     |     |     |
+                  |
 
