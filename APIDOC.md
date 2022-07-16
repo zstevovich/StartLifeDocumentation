@@ -112,7 +112,7 @@ POST /api/Life/ReqJson
 
 | Code | Description                                                                                                                                                              |
 |:----:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  0   | <span style="color:green">Transakcija je uspešno registrovana ili zahtev je uspešno obrađen</span>                                                                                                                                        |
+|  0   | ```diff + Transakcija je uspešno registrovana ili zahtev je uspešno obrađen ```                                                                                          |
 |  4   | Kartica sa ovim brojem nije aktivirana                                                                                                                                   |
 |  4   | Kartica sa ovim brojem ne postoji                                                                                                                                        |
 |  2   | Nehendlovane greške                                                                                                                                                      |
