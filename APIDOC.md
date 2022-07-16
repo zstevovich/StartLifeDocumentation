@@ -38,3 +38,19 @@ POST /api/Life/ReqJson
 | Parameter   | Type      | Required | Description          |
 |:------------|:----------|:---------|:---------------------|
 | `cardno`    | `string`  | `yes`    | broj očitane kartice |
+
+#### odgovor json
+```json
+{
+  "requestid" : "string",
+  "status" : {
+    "code" : "integer",
+    "description" : "string"
+  },
+  "data" : {
+    "yearsinsurance" : "integer",
+    "active" : "boolean",
+    "amountmax" : "string"
+  }
+}
+```
