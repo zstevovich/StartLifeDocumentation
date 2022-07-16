@@ -49,8 +49,8 @@ import java.security.NoSuchAlgorithmException;
 ```
 #### U header-u svakog zahteva se prosleđuje hash kao parametar signature:
 
-```curl
+```libcurl
 curl --location --request POST /api/life/req --header 
-'signature:MjU4ZjFjODRhZTAxMTcyYjBkNDBlNjhmMjljODllMDUwZjI0NWUwZDJhZWU4ZmY1NjViMWZjZmQ5YmJmMTBmOTM1ZWM4MDA4NGZlYjc3Nzcx
-YWI0NjVlMzEwZmVhYzUxZjY0NGFmNDZmNGIzOTU3OWZiOGQzZWMxZjk2YTc2YWE='
+"signature:MjU4ZjFjODRhZTAxMTcyYjBkNDBlNjhmMjljODllMDUwZjI0NWUwZDJhZWU4ZmY1NjViMWZjZmQ5YmJmMTBmOTM1ZWM4MDA4NGZlYjc3Nzcx
+YWI0NjVlMzEwZmVhYzUxZjY0NGFmNDZmNGIzOTU3OWZiOGQzZWMxZjk2YTc2YWE="
 ```
