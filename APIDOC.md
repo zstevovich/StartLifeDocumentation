@@ -77,7 +77,7 @@ POST /api/Life/ReqJson
 | `parameters.datetime`    | `string`      | &check;  | vreme kada je izvršena transakcija u formatu `dd.MM.yyyy hh:mm:ss`                                                                                                                                                                               |
 | `parameters.billno`      | `string`      | &check;  | broj računa (PFR brojač)                                                                                                                                                                                                                         |
 | `parameters.totalamount` | `string`      | &check;  | iznos računa za obračun life iznosa/ benefita u formatu `####.##`                                                                                                                                                                                |
-| `parameters.billtotal`   | `string`      | &check;  | ukupan iznos računasa sa svim stavkama u formatu `####,##`                                                                                                                                                                                       |
+| `parameters.billtotal`   | `string`      | &check;  | ukupan iznos računa sa sa svim stavkama u formatu `####,##`                                                                                                                                                                                      |
 | `parameters.roundamount` | `string`      | &cross;  | iznos koji je dodat kako bi se zaokružila vrednost računa u formatu `####.##`                                                                                                                                                                    |
 | `parameters.addamount`   | `string`      | &cross;  | dodatni iznos koji kupac uplaćuje na svoju polisu u formatu `####.##`                                                                                                                                                                            |
 
@@ -93,4 +93,5 @@ POST /api/Life/ReqJson
 | `data.yearsinsurance` | `integer`     | Godina osiguranja - informativni podatak                 |
 | `data.active`         | `boolean`     | Status polise / kartice, da li je aktivna ili ne         |
 | `data.amountmax`      | `string`      | Preostali dozvoljeni iznos za uplatu do godišnjeg limita | 
+| `data.lifeamount`     | `string`      | Iznos obračunat i dodeljen na polisu kupca               |
 
