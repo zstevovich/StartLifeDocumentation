@@ -3,7 +3,7 @@
 “Hash” za autorizaciju je base64 kodirana verzija heširanog stringa koji se generiše sa SHA-512 algoritmom. 
 Da biste generisali heš za autorizaciju, treba dodati sledeće vrednosti parametara i kreirati string navedenim 
 redosledom korišćenjem "|" kao separator.<br/><br/>
-LYT_SETPOINTS string = chainid + | + billno + | + amount + | + requestId + | +apiKey <br/>LYT_GETPOINTS string = chainid + | + requestId + | + apiKey
+LYT_SETPOINTS string = chainid + | + billno + | + amount + | + requestId + | + apiKey <br/>LYT_GETPOINTS string = chainid + | + requestId + | + apiKey
 <br/><br/>Sada kriptujte string sa SHA-512 algoritmom I konvertujte kriptovanu vrednost u base64 format – dodatno šifrovanje. 
 Dobijena vrednost predstavlja potpis koji se šalje u "header"-u zahteva/requesta. <br/><br/>
 Identifikator zahteva (requestId) mora biti "unique". Početna 4 bajta predstavljaju jedinstveni broj klijenta(chainId) 
