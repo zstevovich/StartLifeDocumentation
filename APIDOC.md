@@ -38,6 +38,5 @@ POST /api/Life/ReqJson
 | `cardno`     | `string`      | `yes`    | broj očitane kartice                                                                                                                                                                                                                             |
                                                                                                                                                                                                  |
 
-
 ### Response
 
