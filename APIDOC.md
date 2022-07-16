@@ -35,21 +35,10 @@ POST /api/Life/ReqJson
 | `posno`              | `integer[32]`      | &check;  | broj kase na kojoj je generisan request                                                                                                                                                                                                          |
 | `parameters`         | `childobject`      |          | child bjekat                                                                                                                                                                                                                                     |
 | `parametsers.cardno` | `string`           | &check;  | broj očitane kartice                                                                                                                                                                                                                             |
-                                                                                                                                                                                                 |
-
 ### Response
 
 | Par.        | Type     | Description           |
 |-------------|----------|-----------------------|
 | `requestid` | `string` | Prodleđeni request id |
-| `status`    | `child`  |  
-| Par.        | Type     | Description           |
-| -----       | -----    | -----                 |
-|             |          |                       |
-                     |
-| `data`      | `child`  |     
-|     |     |     |
-|-----|-----|-----|
-|     |     |     |
-                  |
+| `status`    | `child`  |
 
