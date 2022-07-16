@@ -14,7 +14,7 @@ za LYT_GETPOINT je identičan postupak sa odgovarajućim hash-om koji je već op
 ```csharp
 using System.Security.Cryptography;
 using System.Text;
-...
+
 public String MakeSignatureHash()
     { 
         var hashString="2632|569856631|25600.50|263231912051259417|TUY256XZ";
@@ -29,4 +29,21 @@ public String MakeSignatureHash()
         var plainTextBytes=Encoding.UTF8.GetBytes(hashedInputStringBuilder.ToString());
         return Convert.ToBase64String(plainTextBytes);
     }
+```
+### Primer JAVA
+```java
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.util.Base64;
+import java.security.NoSuchAlgorithmException;
+
+    public StringmakeSignatureHash() throwsNoSuchAlgorithmException {
+        StringhashString="2632|569856631|25600.50|263231912051259417|TUY256XZ";
+        MessageDigestmessageDigest=MessageDigest.getInstance("SHA-512");
+        messageDigest.update(hashString.getBytes());
+        byte[] digest=messageDigest.digest();
+        StringdigestHex=String.format("%0128x", newBigInteger(1, digest));
+        return new String(Base64.getEncoder().encode(digestHex.getBytes()));
+        }
+
 ```
