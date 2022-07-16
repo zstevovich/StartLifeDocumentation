@@ -1,3 +1,5 @@
+<style>text {color:red;}</style>
+
 1. **LYT_GETPOINTS** je nekritična komanda koja ne zahteva nikakve radnje u slučaju da nije uspešno 
 obrađena. Ako kasa ne dobije odgovor servera to ne znači da nije moguće poslati komandu za upis transakcije.
 Ova komanda treba da informiše kasu o statusu kartice/polise kupca kako bi eventualno prekinula dalje operacije
@@ -35,10 +37,17 @@ POST /api/Life/ReqJson
 | `posno`              | `integer[32]`      | &check;  | broj kase na kojoj je generisan request                                                                                                                                                                                                          |
 | `parameters`         | `childobject`      |          | child bjekat                                                                                                                                                                                                                                     |
 | `parametsers.cardno` | `string`           | &check;  | broj očitane kartice                                                                                                                                                                                                                             |
+
 ### Response
 
-| Par.        | Type     | Description           |
-|-------------|----------|-----------------------|
-| `requestid` | `string` | Prodleđeni request id |
-| `status`    | `child`  |
+| Par.                  | Type         | Description                         |
+|-----------------------|--------------|-------------------------------------|
+| `requestid`           | `string`     | <text>Prosleđeni request id </text> |
+| `status`              | `childobject` |
+| `status.code`         | `integer`    |
+| `status.description`  | `string`     |
+| `data`                | `childobject` |
+| `data.yearsinsurance` | `integer`    |
+| `data.active`         | `boolean`    |
+| `data.amountmax`      | `string`     | 
 
