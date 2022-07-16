@@ -25,8 +25,16 @@ POST /api/Life/ReqJson
 ```
 #### body
 
-| Parameter        | Type          | Required | Description                                                                                                                                                                                                        |
-|:-----------------|:--------------|:---------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `requestid`      | `string[50]`  | `yes`    | requestid je identifikator request-a koji predstavlja izvor transakcije, requestid je tipa string koji se reprezentuje isključivo u numeričkom nizu karaktera (123654566663144888...) mora biti jedinstven(unique) |
-| `command`        | `enum`        | `yes`    | LYT_GETPOINTS                                                                                                                                                                                                      |
-| `chainid`        | `integer[16]` | `yes`    | jedinstveni broj klijenta iz priloga A                                                                                                                                                                             |
+| Parameter    | Type          | Required | Description                                                                                                                                                                                                        |
+|:-------------|:--------------|:---------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `requestid`  | `string[50]`  | `yes`    | requestid je identifikator request-a koji predstavlja izvor transakcije, requestid je tipa string koji se reprezentuje isključivo u numeričkom nizu karaktera (123654566663144888...) mora biti jedinstven(unique) |
+| `command`    | `enum`        | `yes`    | LYT_GETPOINTS                                                                                                                                                                                                      |
+| `chainid`    | `integer[16]` | `yes`    | jedinstveni broj klijenta iz priloga A                                                                                                                                                                             |
+| `shopid`     | `integer[32]` | `no`     | šifra objekta u kom je generisan request                                                                                                                                                                           |
+| `shopname`   | `string[100]` | `no`     | naziv objekta u kom je generisan request                                                                                                                                                                           |
+| `posno`      | `integer[32]` | `yes`    | broj kase na kojoj je generisan request                                                                                                                                                                            |
+| `parameters` | `child`       | `yes`    | "child" objekat parametri su u tabeli ispod:                                                                                                                                                                       |
+
+| Parameter   | Type      | Required | Description          |
+|:------------|:----------|:---------|:---------------------|
+| `cardno`    | `string`  | `yes`    | broj očitane kartice |
