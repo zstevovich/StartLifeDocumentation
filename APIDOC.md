@@ -73,7 +73,7 @@ POST /api/Life/ReqJson
 | `parametsers.cardno`     | `string`      | &check;  | broj očitane kartice                                                                                                                                                                                                                             |
 | `parameters.cashierid`   | `integer[32]` | &cross;  | šifra prodavca koji je izvršio transakciju                                                                                                                                                                                                       |
 | `parameters.cashiername` | `string[100]` | &cross;  | naziv prodavca koji je izvršio transakciju                                                                                                                                                                                                       |
-| `parameters.currency`    | `string`      | &check;  | valuta u formatu ISO 4217                                                                                                                                                                                                                        |
+| `parameters.currency`    | `string`      | &check;  | valuta u formatu ISO 4217 (RSD)                                                                                                                                                                                                                  |
 | `parameters.datetime`    | `string`      | &check;  | vreme kada je izvršena transakcija u formatu `dd.MM.yyyy hh:mm:ss`                                                                                                                                                                               |
 | `parameters.billno`      | `string`      | &check;  | broj računa (PFR brojač)                                                                                                                                                                                                                         |
 | `parameters.totalamount` | `string`      | &check;  | iznos računa za obračun life iznosa/ benefita u formatu `####.##`                                                                                                                                                                                |
@@ -95,3 +95,15 @@ POST /api/Life/ReqJson
 | `data.amountmax`      | `string`      | Preostali dozvoljeni iznos za uplatu do godišnjeg limita | 
 | `data.lifeamount`     | `string`      | Iznos obračunat i dodeljen na polisu kupca               |
 
+# Api response codes
+
+| Code | Status                   |
+|:----:|:-------------------------|
+|  0   | `OK`                     |
+|  1   | `PARTIALLY_APPROVED`     |
+|  2   | `SYSTEM_ERROR`           |
+|  3   | `DUPLICATE_TRANSACTION`  |
+|  4   | `INVALID_DATA_ERROR`     |
+|  5   | `ACCESS_ERROR`           |
+|  6   | `OPTIMISTIC_CONCURRENCY` |
+|  9   | `SETUP_ERROR`            |
