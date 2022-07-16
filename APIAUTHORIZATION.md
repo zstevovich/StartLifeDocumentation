@@ -38,11 +38,11 @@ import java.util.Base64;
 import java.security.NoSuchAlgorithmException;
 
     public StringmakeSignatureHash() throwsNoSuchAlgorithmException {
-        StringhashString="2632|569856631|25600.50|263231912051259417|TUY256XZ";
-        MessageDigestmessageDigest=MessageDigest.getInstance("SHA-512");
+        StringhashString = "2632|569856631|25600.50|263231912051259417|TUY256XZ";
+        MessageDigest messageDigest = MessageDigest.getInstance("SHA-512");
         messageDigest.update(hashString.getBytes());
-        byte[] digest=messageDigest.digest();
-        StringdigestHex=String.format("%0128x", newBigInteger(1, digest));
+        byte[] digest = messageDigest.digest();
+        String digestHex = String.format("%0128x", newBigInteger(1, digest));
         return new String(Base64.getEncoder().encode(digestHex.getBytes()));
         }
 
