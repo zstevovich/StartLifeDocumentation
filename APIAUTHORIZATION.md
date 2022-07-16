@@ -54,3 +54,7 @@ curl --location --request POST /api/life/req --header
 "signature:MjU4ZjFjODRhZTAxMTcyYjBkNDBlNjhmMjljODllMDUwZjI0NWUwZDJhZWU4ZmY1NjViMWZjZmQ5YmJmMTBmOTM1ZWM4MDA4NGZlYjc3Nzcx
 YWI0NjVlMzEwZmVhYzUxZjY0NGFmNDZmNGIzOTU3OWZiOGQzZWMxZjk2YTc2YWE="
 ```
+#### Postupak dobijanja ključa (apiKey) je opisan u delu Autentifikacija u APIDOC.md
+
+**Napomena:**
+apiKey se isključivo koristi za kriptovanje potpisa, ni u kom slučaju ne smete slati ovaj ključ u zahtevu.
