@@ -42,7 +42,7 @@ import java.security.NoSuchAlgorithmException;
         MessageDigest messageDigest = MessageDigest.getInstance("SHA-512");
         messageDigest.update(hashString.getBytes());
         byte[] digest = messageDigest.digest();
-        String digestHex = String.format("%0128x", newBigInteger(1, digest));
+        String digestHex = String.format("%0128x", new BigInteger(1, digest));
         return new String(Base64.getEncoder().encode(digestHex.getBytes()));
         }
 
