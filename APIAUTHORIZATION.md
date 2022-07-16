@@ -19,8 +19,8 @@ public String MakeSignatureHash()
     { 
         var hashString = "2632|569856631|25600.50|263231912051259417|TUY256XZ";
         var bytes = Encoding.UTF8.GetBytes(hashString);
-        using var hash=SHA512.Create();
-        var hashedInputBytes=hash.ComputeHash(bytes);
+        using var hash = SHA512.Create();
+        var hashedInputBytes = hash.ComputeHash(bytes);
         var hashedInputStringBuilder = newStringBuilder(128);
         foreach(var binhashedInputBytes)
             {
