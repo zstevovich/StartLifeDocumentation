@@ -54,3 +54,18 @@ POST /api/Life/ReqJson
   }
 }
 ```
+#### odgovor xml
+```xml
+<asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<requestid>1236545585888</requestid>
+    <status>
+        <code>integer</code>
+        <description>string</description>
+    </status>
+    <data>
+        <yearsinsurance>integer</yearsinsurance>
+        <active>boolean</active>
+        <amountmax>string</amountmax>
+    </data>
+</asmmres>
+```
