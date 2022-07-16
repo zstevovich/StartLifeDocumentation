@@ -1,5 +1,3 @@
-<style>text {color:red;}</style>
-
 1. **LYT_GETPOINTS** je nekritična komanda koja ne zahteva nikakve radnje u slučaju da nije uspešno 
 obrađena. Ako kasa ne dobije odgovor servera to ne znači da nije moguće poslati komandu za upis transakcije.
 Ova komanda treba da informiše kasu o statusu kartice/polise kupca kako bi eventualno prekinula dalje operacije
@@ -40,14 +38,14 @@ POST /api/Life/ReqJson
 
 ### Response
 
-| Par.                  | Type         | Description                         |
-|-----------------------|--------------|-------------------------------------|
-| `requestid`           | `string`     | <text>Prosleđeni request id </text> |
-| `status`              | `childobject` |
-| `status.code`         | `integer`    |
-| `status.description`  | `string`     |
-| `data`                | `childobject` |
-| `data.yearsinsurance` | `integer`    |
-| `data.active`         | `boolean`    |
-| `data.amountmax`      | `string`     | 
+| Par.                  | Type          | Description                                              |
+|-----------------------|---------------|----------------------------------------------------------|
+| `requestid`           | `string`      | Prosleđeni request id                                    |
+| `status`              | `childobject` |                                                          |
+| `status.code`         | `integer`     | Kod odgovora servera                                     |
+| `status.description`  | `string`      | Opis odgovora servera                                    |
+| `data`                | `childobject` |                                                          |
+| `data.yearsinsurance` | `integer`     | Godina osiguranja - informativni podatak                 |
+| `data.active`         | `boolean`     | Status polise / kartice, da li je aktivna ili ne         |
+| `data.amountmax`      | `string`      | Preostali dozvoljeni iznos za uplatu do godišnjeg limita | 
 
