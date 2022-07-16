@@ -16,16 +16,17 @@ using System.Security.Cryptography;
 using System.Text;
 ...
 public String MakeSignatureHash()
-{ 
-var hashString="2632|569856631|25600.50|263231912051259417|TUY256XZ";
-var bytes=Encoding.UTF8.GetBytes(hashString);
-using varhash=SHA512.Create();
-var hashedInputBytes=hash.ComputeHash(bytes);
-varhashedInputStringBuilder=newStringBuilder(128);
-foreach(var binhashedInputBytes)
-{hashedInputStringBuilder.Append(b.ToString("x2"));
-}
-var plainTextBytes=Encoding.UTF8.GetBytes(hashedInputStringBuilder.ToString());
-return Convert.ToBase64String(plainTextBytes);
-}
+    { 
+        var hashString="2632|569856631|25600.50|263231912051259417|TUY256XZ";
+        var bytes=Encoding.UTF8.GetBytes(hashString);
+        using varhash=SHA512.Create();
+        var hashedInputBytes=hash.ComputeHash(bytes);
+        var hashedInputStringBuilder=newStringBuilder(128);
+        foreach(var binhashedInputBytes)
+            {
+                hashedInputStringBuilder.Append(b.ToString("x2"));
+            }
+        var plainTextBytes=Encoding.UTF8.GetBytes(hashedInputStringBuilder.ToString());
+        return Convert.ToBase64String(plainTextBytes);
+    }
 ```
