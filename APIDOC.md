@@ -25,47 +25,19 @@ POST /api/Life/ReqJson
 ```
 #### body
 
-| Parameter    | Type          | Required | Description                                                                                                                                                                                                        |
-|:-------------|:--------------|:---------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `requestid`  | `string[50]`  | `yes`    | requestid je identifikator request-a koji predstavlja izvor transakcije, requestid je tipa string koji se reprezentuje isključivo u numeričkom nizu karaktera (123654566663144888...) mora biti jedinstven(unique) |
-| `command`    | `enum`        | `yes`    | LYT_GETPOINTS                                                                                                                                                                                                      |
-| `chainid`    | `integer[16]` | `yes`    | jedinstveni broj klijenta iz priloga A                                                                                                                                                                             |
-| `shopid`     | `integer[32]` | `no`     | šifra objekta u kom je generisan request                                                                                                                                                                           |
-| `shopname`   | `string[100]` | `no`     | naziv objekta u kom je generisan request                                                                                                                                                                           |
-| `posno`      | `integer[32]` | `yes`    | broj kase na kojoj je generisan request                                                                                                                                                                            |
-| `parameters` | `child`       | `yes`    | "child" objekat parametri su u tabeli ispod:                                                                                                                                                                       |
+| Field        | Type          | Required | Description                                                                                                                                                                                                                                      |
+|:-------------|:--------------|:---------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `requestid`  | `string[50]`  | `yes`    | requestid je identifikator request-a koji predstavlja izvor transakcije, requestid je tipa string koji se reprezentuje isključivo u numeričkom nizu karaktera (123654566663144888...) mora biti jedinstven(unique), ovaj parametar generiše kasa |
+| `command`    | `enum`        | `yes`    | LYT_GETPOINTS                                                                                                                                                                                                                                    |
+| `chainid`    | `integer[16]` | `yes`    | jedinstveni broj klijenta iz priloga A                                                                                                                                                                                                           |
+| `shopid`     | `integer[32]` | `no`     | šifra objekta u kom je generisan request                                                                                                                                                                                                         |
+| `shopname`   | `string[100]` | `no`     | naziv objekta u kom je generisan request                                                                                                                                                                                                         |
+| `posno`      | `integer[32]` | `yes`    | broj kase na kojoj je generisan request                                                                                                                                                                                                          |
+| `parameters` | `child`       | `yes`    |    
+| Field        | Type          | Required | Description                                                                                                                                                                                                                                      |
+| `cardno`     | `string`      | `yes`    | broj očitane kartice                                                                                                                                                                                                                             |
+                                                                                                                                                                                                 |
 
-| Parameter   | Type      | Required | Description          |
-|:------------|:----------|:---------|:---------------------|
-| `cardno`    | `string`  | `yes`    | broj očitane kartice |
 
-#### response json
-```json
-{
-  "requestid" : "string",
-  "status" : {
-    "code" : "integer",
-    "description" : "string"
-  },
-  "data" : {
-    "yearsinsurance" : "integer",
-    "active" : "boolean",
-    "amountmax" : "string"
-  }
-}
-```
-#### response xml
-```xml
-<asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<requestid>1236545585888</requestid>
-    <status>
-        <code>integer</code>
-        <description>string</description>
-    </status>
-    <data>
-        <yearsinsurance>integer</yearsinsurance>
-        <active>boolean</active>
-        <amountmax>string</amountmax>
-    </data>
-</asmmres>
-```
+### Response
+
