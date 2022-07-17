@@ -95,6 +95,34 @@ POST /api/Life/ReqJson
 | `data.amountmax`      | `string`      | Preostali dozvoljeni iznos za uplatu do godišnjeg limita | 
 | `data.lifeamount`     | `string`      | Iznos obračunat i dodeljen na polisu kupca               |
 
+### **Autentifikacija / dobijanje apiKey-a**
+
+#### xml endpoint
+```http
+POST /api/Life/GetApiKey
+```
+#### json endpoint
+```http
+POST /api/Life/GetApiKeyJson
+```
+#### body
+| Par.        | Type         | Required | Description                                                                                                                                                                                                                                      |
+|:------------|:-------------|:--------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `requestid` | `string[50]` | &check;  | requestid je identifikator request-a koji predstavlja izvor transakcije, requestid je tipa string koji se reprezentuje isključivo u numeričkom nizu karaktera (123654566663144888...) mora biti jedinstven(unique), ovaj parametar generiše kasa |
+| `username`  | `string`     | &check;  | Korisničko ime iz priloga A                                                                                                                                                                                                                      |
+| `password`  | `string`     | &check;  | šifra iz priloga A                                                                                                                                                                                                                               |                                                                                                                                                                          |
+
+### Response
+
+| Par.                 | Type          | Description                  |
+|----------------------|---------------|------------------------------|
+| `requestid`          | `string`      | Prosleđeni request id        |
+| `status`             | `childobject` |                              |
+| `status.code`        | `integer`     | Kod odgovora servera         |
+| `status.description` | `string`      | Opis odgovora servera        |
+| `data`               | `childobject` |                              |
+| `data.apikey`        | `string`      | Ključ za kriptovanje zahteva |
+
 # Kodovi odgovora api servera
 
 | Code | Status                   |
