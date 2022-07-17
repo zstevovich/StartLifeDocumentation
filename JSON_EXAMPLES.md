@@ -72,3 +72,28 @@ POST /api/Life/ReqJson
   }
 }
 ```
+# Autentifikacija - izdavanje apiKey
+#### Zahtev za izdavanje akiKey
+```http
+POST /api/Life/GetApiKey
+```
+```json
+{
+  "requestid": "120835699953559648",
+  "username": "test1",
+  "password": "test1235"
+}
+```
+#### Odgovor na zahtev
+```json
+{
+  "requestid": "120835699953559648",
+  "status": {
+    "code": 0,
+    "description": "Ispravan zahtev"
+  },
+  "data": {
+    "apikey": "JQ5BT3ReDS"
+  }
+}
+```
