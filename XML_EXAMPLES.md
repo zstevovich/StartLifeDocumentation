@@ -1,5 +1,8 @@
 # LYT_GETPOINTS
 #### Zahtev za komandu LYT_GETPOINTS
+```http
+POST /api/Life/Req
+```
 ```xml
 <asmmreq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <requestid>120835699953559648</requestid>
@@ -30,6 +33,9 @@
 ```
 # LYT_SETPOINTS
 #### Zahtev za komandu LYT_SETPOINTS
+```http
+POST /api/Life/Req
+```
 ```xml
 <asmmreq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <requestid>120835699953559648</requestid>

@@ -1,5 +1,8 @@
 # LYT_GETPOINTS
 #### Zahtev za komandu LYT_GETPOINTS
+```http
+POST /api/Life/ReqJson
+```
 ```json
 {
   "requestid": "120835699953559648",
@@ -30,6 +33,9 @@
 ```
 # LYT_SETPOINTS
 #### Zahtev za komandu LYT_SETPOINTS
+```http
+POST /api/Life/ReqJson
+```
 ```json
 {
   "requestid": "120835699953559648",
