@@ -75,7 +75,7 @@ POST /api/Life/ReqJson
 # Autentifikacija - izdavanje apiKey
 #### Zahtev za izdavanje akiKey
 ```http
-POST /api/Life/GetApiKey
+POST /api/Life/GetApiKeyJson
 ```
 ```json
 {

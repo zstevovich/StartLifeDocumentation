@@ -72,3 +72,28 @@ POST /api/Life/Req
     </data>
 </asmmres>
 ```
+# Autentifikacija - izdavanje apiKey
+#### Zahtev za izdavanje akiKey
+```http
+POST /api/Life/GetApiKey
+```
+```xml
+<asmmreq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <requestid>120835699953559648</requestid>
+    <username>test</username>
+    <password>test1</password>
+</asmmreq>
+```
+#### Odgovor na zahtev
+```xml
+<asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <requestid>120835699953559648</requestid>
+    <status>
+        <code>0</code>
+        <description>Ispravan zahtev</description>
+    </status>
+    <data>
+        <apikey>JQ5BT3ReDS</apikey>
+    </data>
+</asmmres>
+```
