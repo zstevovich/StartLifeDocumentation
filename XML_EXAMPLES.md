@@ -97,3 +97,101 @@ POST /api/Life/GetApiKey
     </data>
 </asmmres>
 ```
+# Primeri odgovora sa različitim kodom - kodovi koji se razlikuju od koda 0
+#### Upozorenje u vezi sa godišnjim limitom polise
+```xml
+<asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <requestid>1236545585888</requestid>
+    <status>
+        <code>1</code>
+        <description>Upozorenje u vezi sa godišnjim limitom polise</description>
+    </status>
+    <data>
+        <lifeamount>9.00</lifeamount>
+        <yearsinsurance>1</yearsinsurance>
+        <active>true</active>
+        <amountmax>0.00</amountmax>
+    </data>
+    <warning>
+        <lifeamount>9</lifeamount>
+        <roundamount>-10.00</roundamount>
+        <addamount>-2.50</addamount>
+    </warning>
+</asmmres>
+```
+#### Nehendlovane greške
+```xml
+<asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <requestid>1236545585888</requestid>
+    <status>
+        <code>2</code>
+        <description>Sistemska Greška</description>
+    </status>
+</asmmres>
+```
+#### Snapshot već registrovanje transakcije - dupla transakcija
+```xml
+<asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <requestid>1236545585888</requestid>
+    <status>
+        <code>3</code>
+        <description>Transakcija prema ovom zahtevu (requestid) je već registrovana</description>
+    </status>
+    <data>
+        <lifeamount>256.50</lifeamount>
+        <yearsinsurance>1</yearsinsurance>
+        <active>true</active>
+        <amountmax>95320.50</amountmax>
+    </data>
+</asmmres>
+```
+#### Validacione greške
+```xml
+<asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <requestid>1236545585888</requestid>
+    <status>
+        <code>4</code>
+        <description>Neispravni podaci</description>
+    </status>
+    <data>
+        <errors>
+            <name>requestid</name>
+            <message>request id je neispravan</message>
+        </errors>
+        <errors>
+            <name>parameters.cardno</name>
+            <message>Broj kartice mora imati 12 karaktera</message>
+        </errors>
+    </data>
+</asmmres>
+```
+#### Neispravan potpis - hash
+```xml
+<asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <requestid>1236545585888</requestid>
+    <status>
+        <code>5</code>
+        <description>Neispravan potpis</description>
+    </status>
+</asmmres>
+```
+#### Neispravni kredencijali za dobijanje apiKey
+```xml
+<asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <requestid>1236545585888</requestid>
+    <status>
+        <code>9</code>
+        <description>Korisnočko ime ili šifra nisu ispravni</description>
+    </status>
+</asmmres>
+```
+#### Optimistic concurrency greška
+```xml
+<asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <requestid>1236545585888</requestid>
+    <status>
+        <code>6</code>
+        <description>Druga transakcija je u toku, pokušajte ponovo da pošaljete zahtev</description>
+    </status>
+</asmmres>
+```
