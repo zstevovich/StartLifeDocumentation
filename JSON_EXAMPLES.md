@@ -34,8 +34,10 @@
 {
   "requestid": "120835699953559648",
   "command": "LYT_SETPOINTS",
-  "chainid": 1208,"shopid": 1236,
-  "shopname": "optional","posno": 1203,
+  "chainid": 1208,
+  "shopid": 1236,
+  "shopname": "optional",
+  "posno": 1203,
   "parameters": {
     "cardno": "879281740738",
     "cashierid": "optional",
