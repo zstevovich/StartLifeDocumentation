@@ -99,6 +99,9 @@ POST /api/Life/GetApiKey
 ```
 # Primeri odgovora sa različitim kodom - kodovi koji se razlikuju od koda 0
 #### Upozorenje u vezi sa godišnjim limitom polise
+Primer u kom je zbog prekoračenja godišnjeg limita obračunato 9 dinara, u parametru warning stoji u lifeamount 9 dinara
+, a to je iznos koji je moguće obračunati do limita, takođe info za zaokruži roundamount -10 dinara što znači da kupcu treba
+vratiti taj iznos jer je odbijen za uplatu zbog prekoračenja limita.
 ```xml
 <asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <requestid>1236545585888</requestid>
@@ -130,6 +133,9 @@ POST /api/Life/GetApiKey
 </asmmres>
 ```
 #### Snapshot već registrovanje transakcije - dupla transakcija
+Primer greške kada je poslat zahtev sa requestid - jem koji je već registrovan, sistem vraća snapshot tog requesta jer 
+je transakcija već registrovana i obaveštava o tome, ovaj odgovor se može koristiti i kao mehanizam provere kada je došlo
+do prekida komunikacije u momentu slanja requesta i kasa nije uspela da snimi odgovor servera
 ```xml
 <asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <requestid>1236545585888</requestid>
@@ -166,6 +172,7 @@ POST /api/Life/GetApiKey
 </asmmres>
 ```
 #### Neispravan potpis - hash
+Greška koja obaveštava da nije dobro generisan hash, a koji se šalje kao varijabla signature u headeru u base64 formatu
 ```xml
 <asmmres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <requestid>1236545585888</requestid>
